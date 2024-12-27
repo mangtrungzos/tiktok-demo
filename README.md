@@ -44,4 +44,28 @@ import App from '~/App'
 \\ 9. create vscode/setting.json
 
 \\ 10. configuration CSS/SASSS
+```jsx
+/**
+ * 1. Create GlobalStyles component
+ * 2. Install SASS libary: `npm i -D sass` - Use only in production environment 
+ * 3. Reset CSS : npm install --save normalize.css
+ * 5. Default CSS: font-family, font-size, line-height
+*/
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --primary: #fe2c55;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+```
