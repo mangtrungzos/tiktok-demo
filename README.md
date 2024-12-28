@@ -69,3 +69,26 @@ body {
     text-rendering: optimizeSpeed;
 }
 ```
+
+\\ 12. configuration Router/Layout
+```jsx
+/**
+ * 1. Phân tích tổng quan Layout
+ * 2. Cài đặt react-router-dom: npm i react-router-dom
+ * 3. Đưa cấu hình routes ra ngoài
+ * 4. Xây dựng cơ chế tải layout
+*/
+```
+1. Overview of layout analysis
+- 4 Layout
+
+3. VD muốn thêm một trang /pages/profile
+- Thêm một file trang profile
+- Nạp profile vào trong /routes
+
+4. cơ chế tải layout
+- default layout: header, sidebar, content (create Default Layout)
+  - <Header /> -> div: <Sidebar /> -> div: <Content />
+  - layout: null - default not have layout
+  - Fragment: Chỉ là thẻ để chứa, chứ không sinh ra thẻ thật ở trong DOM
+  - children: content truyền từ ngoài vào
