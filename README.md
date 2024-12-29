@@ -103,3 +103,17 @@ body {
 2. Create sidebar 
    Create sidebar module scss
 3. Content : flex: 1 - Chiếm khoảng trống còn lại trong vùng flex css
+
+\\ 14. Build UI
+
+1. Get icon tiktok and create file assets/images/logo.svg 
+   - assests là một folder chứa những file tĩnh
+2. Install Font deps
+   - Push it into the package.json
+```jsx
+"@fortawesome/fontawesome-svg-core": "^1.3.0",
+"@fortawesome/free-brands-svg-icons": "^6.0.0",
+"@fortawesome/free-regular-svg-icons": "^6.0.0",
+"@fortawesome/free-solid-svg-icons": "^6.0.0",
+"@fortawesome/react-fontawesome": "^0.1.17",
+```
