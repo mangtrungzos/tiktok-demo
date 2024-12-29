@@ -92,3 +92,14 @@ body {
   - layout: null - default not have layout
   - Fragment: Chỉ là thẻ để chứa, chứ không sinh ra thẻ thật ở trong DOM
   - children: content truyền từ ngoài vào
+
+
+\\ 13. Build Layout
+- Header module sass - Component/header
+- install classnames
+
+1. Create header in component (this file will be reused)
+   Create header module scss
+2. Create sidebar 
+   Create sidebar module scss
+3. Content : flex: 1 - Chiếm khoảng trống còn lại trong vùng flex css
