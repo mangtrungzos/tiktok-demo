@@ -106,6 +106,7 @@ body {
 
 \\ 14. Build UI
 
+> UI header
 1. Get icon tiktok and create file assets/images/logo.svg 
    - assests là một folder chứa những file tĩnh
 2. Install Font deps
@@ -117,3 +118,8 @@ body {
 "@fortawesome/free-solid-svg-icons": "^6.0.0",
 "@fortawesome/react-fontawesome": "^0.1.17",
 ```
+3. Install @tippyjs/react
+- used to create popper | popper: Cách xây dựng cửa sổ bật lên tự động
+*Key word: tippy react props*
+
+- object-fit: cover | Giúp ảnh giữ đúng tỉ lệ và tràn hình tròn
