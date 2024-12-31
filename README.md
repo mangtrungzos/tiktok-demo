@@ -123,3 +123,16 @@ body {
 *Key word: tippy react props*
 
 - object-fit: cover | Giúp ảnh giữ đúng tỉ lệ và tràn hình tròn
+
+> UI header - 2
+- Build button
+- Phân tích thiết kế: Điểm chung của những button là gì | Có thể gom chung vào 1 comp | Có thể tái sử dụng không?
+```jsx
+const cx = classNames.bind(styles);
+
+const classes = cx('wrapper, {
+   primary
+});
+```
+- CSS properties: currentColor | Nó sẽ ăn theo màu của thuộc tính css phía trên nó
+- user-select: none; | remove select word
