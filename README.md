@@ -153,5 +153,6 @@ const classes = cx('wrapper, {
              - Tại thời điểm hiện tại lúc nào cũng sẽ render phần tử cuối cùng của mảng
              - Khi back chỉ cần xóa remove phần tử cuối cùng của mảng
 
-
-> 17:08
+- Menu level 2: set name: children
+- array.length - 1: slice(0, arr.length - 1) - Cắt từ phần tử số 0 đến phần tử gần cuối cùng
+> Chỉ số kết thúc (không bao gồm phần tử ở vị trí này, tức là phần tử cuối cùng)
