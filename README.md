@@ -136,3 +136,22 @@ const classes = cx('wrapper, {
 ```
 - CSS properties: currentColor | Nó sẽ ăn theo màu của thuộc tính css phía trên nó
 - user-select: none; | remove select word
+
+> UI header - 3
+\\ When logined in
+- Menu 1 level - Menu 2 level
+
+\\ When not logined in 
+
+- Link local we use `to`
+- JSON.stringify(): convert object to string
+
+\\ Hierachy mindset
+- use Array: - hover vào nó sẽ render ra 1 list mảng đầu tiên
+             - Menu 1 level - cả menu là phần tử đầu tiên của một mảng 
+             - Click on English thì sẽ render 1 menu khác | Cả menu list này (level 2) sẽ push vào mảng làm phần tử thứ 2 của mảng 
+             - Tại thời điểm hiện tại lúc nào cũng sẽ render phần tử cuối cùng của mảng
+             - Khi back chỉ cần xóa remove phần tử cuối cùng của mảng
+
+
+> 17:08
