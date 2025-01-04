@@ -156,3 +156,9 @@ const classes = cx('wrapper, {
 - Menu level 2: set name: children
 - array.length - 1: slice(0, arr.length - 1) - Cắt từ phần tử số 0 đến phần tử gần cuối cùng
 > Chỉ số kết thúc (không bao gồm phần tử ở vị trí này, tức là phần tử cuối cùng)
+
+> UI header - 4
+\\ onHide (tippy)
+\\ tooltip (tippy) : Khi hover vào thì nó sẽ hiện một cái message liên quan tới cái icon đó
+
+> 31:05
