@@ -44,9 +44,10 @@ function Menu({ children, items = [], onChange=defaultFn }) {
             delay={[0, 500]}
             // visible // show and hidden menu items
             placement='bottom-end'
-            offset={[12, 8]} // reposition the menu list
+            offset={[11, 9]} // reposition the menu list
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
+                    <span className={cx('menu-arrow')}></span>
                     <PopperWrapper className={cx('menu-popper')}>
                         {history.length > 1 && <Header title="Language" onBack={() => {
                             setHistory(prev => prev.slice(0, history.length - 1))
@@ -58,7 +59,6 @@ function Menu({ children, items = [], onChange=defaultFn }) {
             // Hide menu 
             onHide={() => setHistory(prev => prev.slice(0, 1))}
         >
-
             {children}
         </Tippy>
      );

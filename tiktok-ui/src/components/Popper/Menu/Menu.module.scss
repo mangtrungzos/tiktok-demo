@@ -1,12 +1,26 @@
 // Menu wrapper
 .menu-list {
     width: 224px;
+    position: relative;
 
     // Menu items
     .menu-item {
     justify-content: flex-start;
     margin-left: 0!important;
     }
+}
+
+.menu-arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid var(--white);
+    position: absolute;
+    top: -6px; /* Adjust based on your needs */
+    right: 10%;
+    // transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .menu-popper {
