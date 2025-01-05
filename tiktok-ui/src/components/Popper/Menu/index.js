@@ -42,7 +42,7 @@ function Menu({ children, items = [], onChange=defaultFn }) {
         <Tippy
             interactive={true}
             delay={[0, 500]}
-            // visible // show and hidden menu items
+            visible // show and hidden menu items
             placement='bottom-end'
             offset={[11, 9]} // reposition the menu list
             render={(attrs) => (

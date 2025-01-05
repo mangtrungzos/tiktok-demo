@@ -161,4 +161,11 @@ const classes = cx('wrapper, {
 \\ onHide (tippy)
 \\ tooltip (tippy) : Khi hover vào thì nó sẽ hiện một cái message liên quan tới cái icon đó
 
-> 31:05
+> UI header - 7
+\\ Change font family
+\\ Change header icons
+\\ Create component image
+
+- icons use svg tag to make it easier when changing icons color (`fill="..."`)
+
+>14:52 #7

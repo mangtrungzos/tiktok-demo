@@ -4,12 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faCircleXmark, 
     faSpinner, 
-    faMagnifyingGlass, 
     faEllipsisVertical, 
     faEarthAsia, 
     faCircleQuestion, 
     faKeyboard, 
-    faCloudUpload,
     faCoins,
     faUser,
     faGear,
@@ -23,8 +21,9 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu'
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
-import images from '~/assests/images';
+import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
+import { MessageIcon, SearchIcon, UploadIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles)  
 
@@ -143,7 +142,7 @@ function Header() {
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner}/>
                         
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass}/>
+                            <SearchIcon />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -152,9 +151,16 @@ function Header() {
                     {/** Show user - login and not login */}
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 200]} content="Upload video" placement='bottom'>
+                            <div>
+                                <button className={cx('upload-btn')}>
+                                    <UploadIcon className={cx('upload-icon')} />
+                                    <span className={cx('upload-text')}>Upload</span>
+                                </button>
+                            </div>
+                            
+                            <Tippy delay={[0, 200]} content="Inbox" placement='bottom'>
                                 <button className={cx('actions-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                             

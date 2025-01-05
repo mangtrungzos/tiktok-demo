@@ -122,6 +122,35 @@
     cursor: pointer;
 }
 
+.upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0 16px;
+    min-width: 110px;
+    height: 36px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+// .upload-icon{
+//     margin-right: 8px;
+// }
+
+.upload-text{
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: TikTokFont, sans-serif;
+    margin-left: 8px;
+}   
+
+
 .user-avatar {
     width: 32px;
     height: 32px;
