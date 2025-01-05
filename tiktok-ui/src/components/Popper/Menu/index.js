@@ -44,6 +44,7 @@ function Menu({ children, items = [], onChange=defaultFn }) {
             delay={[0, 500]}
             // visible // show and hidden menu items
             placement='bottom-end'
+            offset={[12, 8]} // reposition the menu list
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>
