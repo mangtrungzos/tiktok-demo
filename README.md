@@ -168,4 +168,14 @@ const classes = cx('wrapper, {
 
 - icons use svg tag to make it easier when changing icons color (`fill="..."`)
 
->14:52 #7
+```jsx
+   <Image
+      className={cx('user-avatar')} 
+      src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/5b0d5f71405f0d8e4d545cba13c6dff7.jpeg?lk3s=a5d48078&nonce=57800&refresh_token=f28f792b896ae3ec1dc1c05420419fe5&x-expires=1736132400&x-signature=NIhVC1EMXvMFq%2B%2Bpchv1RSG0mOk%3D&shp=a5d48078&shcp=81f88b70" 
+      alt='Chau Ngan'                                
+   />
+``` 
+
+> Truyền như này nếu bị lỗi contains của tippy thì ta sẽ sử dụng `forwardRef` - index.js/Images
+
+- use fallback for images in situation error image: Nếu đường dẫn hình ảnh không tồn tại hoặc bị lỗi, bạn có thể sử dụng một hình ảnh thay thế mặc định

@@ -19,6 +19,7 @@ import 'tippy.js/dist/tippy.css'
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu'
+import Image from '~/components/Images';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -173,10 +174,13 @@ function Header() {
                         )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img 
-                                src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/5b0d5f71405f0d8e4d545cba13c6dff7.jpeg?lk3s=a5d48078&nonce=57800&refresh_token=f28f792b896ae3ec1dc1c05420419fe5&x-expires=1736132400&x-signature=NIhVC1EMXvMFq%2B%2Bpchv1RSG0mOk%3D&shp=a5d48078&shcp=81f88b70" 
+                            <Image
                                 className={cx('user-avatar')} 
-                                alt='Chau Ngan' />
+                                src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/5b0d5f71405f0d8e4d545cba13c6dff7.jpeg?lk3s=a5d48078&nonce=57800&refresh_token=f28f792b896ae3ec1dc1c05420419fe5&x-expires=1736132400&x-signature=NIhVC1EMXvMFq%2B%2Bpchv1RSG0mOk%3D&shp=a5d48078&shcp=81f88b70" 
+                                alt='Chau Ngan'   
+                                fallback="https://th.bing.com/th/id/OIP.NFNT-QQ3zPiy0JCZKInAqAHaJb?rs=1&pid=ImgDetMain"                             
+                            /> 
+                            
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
