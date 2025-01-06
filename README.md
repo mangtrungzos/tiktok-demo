@@ -179,3 +179,19 @@ const classes = cx('wrapper, {
 > Truyền như này nếu bị lỗi contains của tippy thì ta sẽ sử dụng `forwardRef` - index.js/Images
 
 - use fallback for images in situation error image: Nếu đường dẫn hình ảnh không tồn tại hoặc bị lỗi, bạn có thể sử dụng một hình ảnh thay thế mặc định
+
+
+\\ 15. Build logic header 
+> Logic header #1
+# Analysis
+
+> Search field:
+1. Don't have to focus when F5 website
+2. Type in the field, show button `x` and when clicking it will delete word in the field
+
+> two-way binding:
+- for close and loading in the search field
+
+- set a variable boolean to represent status whether it is focused the input or not, blur 
+- onClickOutside: xử lí khi blur ra ngoài thì mục tìm kiếm sẽ bị ẩn đi /index.js/Search
+- onFocus(): show the search results
