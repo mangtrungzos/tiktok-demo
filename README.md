@@ -208,7 +208,9 @@ const classes = cx('wrapper, {
 => Sẽ sinh ra lỗi `length` nếu searchValue được truyền vào là một chuỗi rỗng.
 => Có thể check lỗi ở tab network của website(payload).
 
-- `How to avoid error sending continuous request to server: when the user stops typing, the search will be performed`.
 - Sử dụng `trim()` để loại bỏ khoảng trống lúc typing.
 - Tránh vi phạm mã hóa kí tự trên url ta sử dụng `encodeURIComponent()` - `always have this`: khi nhập dữ liệu có kí tự đặc biệt thì sẽ không sinh ra lỗi.
 
+# Prolbem: Sending continuous requests to server
+- `How to avoid error sending continuous request to server: when the user stops typing, the search will be performed`.
+> debounce: Khi gặp một chuỗi tình thế xảy ra liên tục, thì ta chỉ muốn thực hiện một hành động cuối cùng khi ngững lại.
