@@ -126,6 +126,7 @@ body {
 
 > UI header - 2
 - Build button
+- Điều kiện để hiện nút clear khi có searchValue (!!searchValue)
 - Phân tích thiết kế: Điểm chung của những button là gì | Có thể gom chung vào 1 comp | Có thể tái sử dụng không?
 ```jsx
 const cx = classNames.bind(styles);
@@ -195,3 +196,19 @@ const classes = cx('wrapper, {
 - set a variable boolean to represent status whether it is focused the input or not, blur 
 - onClickOutside: xử lí khi blur ra ngoài thì mục tìm kiếm sẽ bị ẩn đi /index.js/Search
 - onFocus(): show the search results
+
+\\ 16. Build Logic header
+> Knowledge need to be have:
+1. Promise
+2. Fetch API
+3. RESTful API
+4. JSON
+
+- fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${searchValue}&type=less`).
+=> Sẽ sinh ra lỗi `length` nếu searchValue được truyền vào là một chuỗi rỗng.
+=> Có thể check lỗi ở tab network của website(payload).
+
+- `How to avoid error sending continuous request to server: when the user stops typing, the search will be performed`.
+- Sử dụng `trim()` để loại bỏ khoảng trống lúc typing.
+- Tránh vi phạm mã hóa kí tự trên url ta sử dụng `encodeURIComponent()` - `always have this`: khi nhập dữ liệu có kí tự đặc biệt thì sẽ không sinh ra lỗi.
+
