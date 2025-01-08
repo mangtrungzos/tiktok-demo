@@ -214,3 +214,13 @@ const classes = cx('wrapper, {
 # Prolbem: Sending continuous requests to server
 - `How to avoid error sending continuous request to server: when the user stops typing, the search will be performed`.
 > debounce: Khi gặp một chuỗi tình thế xảy ra liên tục, thì ta chỉ muốn thực hiện một hành động cuối cùng khi ngững lại.
+
+\\ 17. Axios Library
+- Thư viện gọi API (Tối ưu việc gọi API)
+- Ngoài ra còn: super agent
+
+- 2 ways call API: XMLHttpRequest / Fetch
+
+- use XMLHttpRequest
+
+- With file handle API we'll create /api-service folder
