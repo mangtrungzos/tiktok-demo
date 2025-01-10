@@ -224,3 +224,14 @@ const classes = cx('wrapper, {
 - use XMLHttpRequest
 
 - With file handle API we'll create /api-service folder
+
+\\ 18. Fix and finish header
+- Link logo về trang chủ -> OK
+- Sửa phông chữ trong ô tìm kiếm -> OK
+- Không cho nhập kí tự đầu tiên là space trong ô tìm kiếm -> OK
+- Bỏ qua hành vi focus vào ô tìm kiếm khi nhấn submit -> OK
+- Không ẩn menu khi click vào avatar -> OK
+- Xử lý thanh cuộn trong menu đa cấp, khi có nhiều content
+- Thêm style overlay cho thanh cuộn body
+- Sửa title trang và update favicon
+- Fix warning thư viện Tippy- 

@@ -52,5 +52,3 @@ export default UseDebounce;
 */
 ```
 
-# Axios Library
-- optimize call API structure

@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onChange=defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange=defaultFn }) {
     // Mindset - at the first time we render the items, the first page is just the first element of an array 
     // 1. Render list of items = [] - We have to pass in the useState as object
     // 2. Object will represent the data of the current data
@@ -45,6 +45,7 @@ function Menu({ children, items = [], onChange=defaultFn }) {
             // visible // show and hidden menu items
             placement='bottom-end'
             offset={[11, 9]} // reposition the menu list
+            hideOnClick={hideOnClick}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <span className={cx('menu-arrow')}></span>

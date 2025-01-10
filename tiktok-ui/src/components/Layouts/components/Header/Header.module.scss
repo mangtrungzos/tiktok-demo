@@ -20,6 +20,10 @@
     padding: 0 var(--default-layout-horizontal-spacer);
 }
 
+.logo-link {
+    display: flex;
+}
+
 // actions
 .actions {
     display: flex;
@@ -58,7 +62,7 @@
 .upload-text{
     font-size: 1.6rem;
     font-weight: 600;
-    font-family: TikTokFont, sans-serif;
+    font-family: var(--font-family);
     margin-left: 8px;
 }   
 
@@ -79,5 +83,3 @@
     padding: 4px 8px;
     cursor: pointer;
 }
-
-
