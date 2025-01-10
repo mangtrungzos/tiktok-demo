@@ -234,4 +234,8 @@ const classes = cx('wrapper, {
 - Xử lý thanh cuộn trong menu đa cấp, khi có nhiều content
 - Thêm style overlay cho thanh cuộn body
 - Sửa title trang và update favicon
-- Fix warning thư viện Tippy- 
+- Fix warning thư viện Tippy
+
+- `overlay`: Thuộc tính css dành cho scroll bar, phủ lên body
+
+- `fix tippy warning`: appendTo={() => document.body} - Set in the tag parent where it contains tippy or we can cover with <div>

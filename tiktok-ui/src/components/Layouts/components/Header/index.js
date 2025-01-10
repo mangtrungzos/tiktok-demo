@@ -51,7 +51,7 @@ function Header() {
 
                         // if we've menu level 2
                         // children: {...}
-                    }
+                    },
                 ]
             },
         },

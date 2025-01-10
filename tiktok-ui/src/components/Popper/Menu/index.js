@@ -25,17 +25,43 @@ function Menu({ children, items = [], hideOnClick = false, onChange=defaultFn })
             // children : is children: {...} /Header - Not have children_return undefined
 
             // Always guaranteed to be a value Boolean (true or false) - If it have children, it will be true or not
-            const isParent = !!item.children 
-            return <MenuItems key={index} data={item} onClick={() => {
-                if (isParent) {
-                    // console.log(item.children)
-                    // Push add to array to be able to return the first page - level 1 menu - prev: previous history state
-                    setHistory(prev => [...prev, item.children]);
-                } else {
-                    onChange(item)
-                }
-            }}/>
+            const isParent = !!item.children;
+            return (
+                <MenuItems 
+                    key={index} 
+                    data={item} 
+                    onClick={() => {
+                        if (isParent) {
+                            // console.log(item.children)
+                            // Push add to array to be able to return the first page - level 1 menu - prev: previous history state
+                            setHistory(prev => [...prev, item.children]);
+                        } else {
+                            onChange(item);
+                        }
+                    }}
+                />
+            )
         })
+    }
+
+    const handleBack = () => {
+        setHistory(prev => prev.slice(0, history.length - 1));
+    }
+
+    const renderResult = (attrs) => (
+        <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
+            <span className={cx('menu-arrow')}></span>
+            <PopperWrapper className={cx('menu-popper')}>
+                {history.length > 1 && <Header title={current.title} onBack={handleBack} />}
+                <div className={cx('menu-body')}>
+                    {renderItems()}
+                </div>
+            </PopperWrapper>
+        </div>
+    )
+
+    const handleReset = () => {
+        setHistory(prev => prev.slice(0, 1));
     }
 
     return ( 
@@ -46,19 +72,9 @@ function Menu({ children, items = [], hideOnClick = false, onChange=defaultFn })
             placement='bottom-end'
             offset={[11, 9]} // reposition the menu list
             hideOnClick={hideOnClick}
-            render={(attrs) => (
-                <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
-                    <span className={cx('menu-arrow')}></span>
-                    <PopperWrapper className={cx('menu-popper')}>
-                        {history.length > 1 && <Header title="Language" onBack={() => {
-                            setHistory(prev => prev.slice(0, history.length - 1))
-                        }} />}
-                        {renderItems()}
-                    </PopperWrapper>
-                </div>
-            )}
+            render={renderResult}
             // Hide menu 
-            onHide={() => setHistory(prev => prev.slice(0, 1))}
+            onHide={handleReset}
         >
             {children}
         </Tippy>
