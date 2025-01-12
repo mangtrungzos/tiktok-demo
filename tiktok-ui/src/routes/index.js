@@ -1,7 +1,7 @@
 import config  from '~/config';
 
 // Layouts
-import { HeaderOnly } from '~/components/layouts';
+import { HeaderOnly } from '~/layouts';
 
 // Pages
 import Home from '~/pages/Home';

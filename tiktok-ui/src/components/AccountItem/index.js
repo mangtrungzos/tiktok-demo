@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom'
@@ -21,7 +22,11 @@ function AccountItem({ data }) {
                 {/* <span className={cx('username')}>Quynh Pham</span> */}
             </div>
         </Link>
-    )
+    );
+}
+
+AccountItem.propTypes = {
+    data: PropTypes.object
 }
 
 export default AccountItem

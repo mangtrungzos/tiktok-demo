@@ -245,3 +245,13 @@ const classes = cx('wrapper, {
 - src/components/Layout -> src/Layout
 - routes config
 - create file env: .env.local (for local), .env.development(for developer in team), environment production (.env.production)
+
+\\ 20. PropTypes : validate props
+- propTypes for <AccountItem>
+- propTypes for <Button> isRequired
+- instanceOf(...): là một thực thể được tạo ra bởi một constructor | Dùng để check props có phải instanceOf của constructor.
+- instanceOf trong OOP: là một đối tượng được tạo ra bởi một class.
+```jsx
+const a = [1, 2];
+console.log(a instanceOf(array));
+```
