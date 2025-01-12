@@ -239,3 +239,9 @@ const classes = cx('wrapper, {
 - `overlay`: Thuộc tính css dành cho scroll bar, phủ lên body
 
 - `fix tippy warning`: appendTo={() => document.body} - Set in the tag parent where it contains tippy or we can cover with <div>
+
+\\ 19. Refactor and optimize code
+- apiService -> services
+- src/components/Layout -> src/Layout
+- routes config
+- create file env: .env.local (for local), .env.development(for developer in team), environment production (.env.production)
