@@ -255,3 +255,11 @@ const classes = cx('wrapper, {
 const a = [1, 2];
 console.log(a instanceOf(array));
 ```
+
+\\ 21. propTypes
+- case (Nhận một children duy nhất): Có comp luôn chỉ muốn nhận một children duy nhất, không nhận 2 children
+      ```jsx
+         function Global({children}) {
+            return React.Children.only(children);
+         }
+      ```

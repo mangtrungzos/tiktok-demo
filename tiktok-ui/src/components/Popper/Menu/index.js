@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import classNames  from 'classnames/bind';
@@ -18,6 +19,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange=defaultFn })
 
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
+    console.log(current);
 
     const renderItems = () => {
         // current: the last element - data: items - .data: Will get the items
@@ -79,6 +81,13 @@ function Menu({ children, items = [], hideOnClick = false, onChange=defaultFn })
             {children}
         </Tippy>
      );
+}
+
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+    hideOnClick: PropTypes.bool,
+    onChange: PropTypes.func
 }
 
 export default Menu;
