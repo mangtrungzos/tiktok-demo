@@ -19,16 +19,16 @@ const cx = classNames.bind(styles)
 function Search() {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
     // When user stops typing about 500 miliseconds, debounce value will be updated with searchValue new value
-    const debounced = UseDebounce(searchValue, 500);
+    const debouncedValue = UseDebounce(searchValue, 500);
 
     const inputRef = useRef();
 
     useEffect(() => {
-        if(!debounced.trim()) {
+        if(!debouncedValue.trim()) {
             setSearchResult([]);
             return;
         }
@@ -37,14 +37,14 @@ function Search() {
         const fetchApi = async () => {
             setLoading(true);
 
-            const result = await searchServices.search(debounced);
+            const result = await searchServices.search(debouncedValue);
             setSearchResult(result);
             setLoading(false);
         }
 
         fetchApi();
 
-    }, [debounced]);
+    }, [debouncedValue]);
 
     const handleHideResult = () => {
         setShowResult(false);
@@ -55,6 +55,11 @@ function Search() {
         if (!searchValue.startsWith(' ')) {
             setSearchValue(searchValue);
         }
+    };
+
+    const handleClear = () => {
+        setSearchValue('');
+        inputRef.current.focus();
     };
 
     return ( 
@@ -89,13 +94,7 @@ function Search() {
                     
                     {/* Logic button clear */}
                     {!!searchValue && !loading && (
-                        <button 
-                            className={cx('clear')} 
-                            onClick={() => {
-                                setSearchValue('');
-                                inputRef.current.focus();
-                            }}
-                        >
+                        <button className={cx('clear')} onClick={handleClear}>
                             <FontAwesomeIcon icon={faCircleXmark}/>
                         </button>
                     )}

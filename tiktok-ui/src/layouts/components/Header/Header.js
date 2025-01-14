@@ -28,6 +28,7 @@ import config  from '~/config';
 const cx = classNames.bind(styles)  
 
 function Header() {
+    // const currentUser = false;
     const currentUser = true;
     
     const MENU_ITEMS = [

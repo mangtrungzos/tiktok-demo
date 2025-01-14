@@ -62,6 +62,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange=defaultFn })
         </div>
     )
 
+    // reset to first page
     const handleReset = () => {
         setHistory(prev => prev.slice(0, 1));
     }

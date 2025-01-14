@@ -263,3 +263,12 @@ console.log(a instanceOf(array));
             return React.Children.only(children);
          }
       ```
+
+\\ 22. optimize Header
+- Chỉ có một state thì không cần thiết dùng useCallback() cho sử lý hàm
+- Trừ khi có nhiều state trở lên, hoặc khi có một state bị set lại mà không có nhiều thành phần UI dùng state đó trong cùng comp
+- comp `Search` có thể sử dụng useMemo() để tránh mỗi lần bị re-render lại khi searchResult thay đổi
+
+- Search close bị che khi text dài 
+-  bug là khi dùng primary cùng to= hay href= thì nó ăn cái color = text color trong Global Style
+- Review lại các components
