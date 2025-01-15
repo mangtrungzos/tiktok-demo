@@ -272,3 +272,15 @@ console.log(a instanceOf(array));
 - Search close bị che khi text dài 
 -  bug là khi dùng primary cùng to= hay href= thì nó ăn cái color = text color trong Global Style
 - Review lại các components
+
+\\ 23. Build Ui sidebar
+- PropTypes.node.isRequired: Sử dụng đối với thành phần có thể render được
+- components `NavLink` - `react-router-dom` đối với link nội bộ có active đổi màu thì sử dụng component này
+- `NavLink` will create `<a>` tag
+- export một comp lẻ thì khi import phải để ở trong {...}
+
+# Lesson react.createElement 
+- icon={<HomeIcon />}: chuyển HomeIcon (component) thành react element - Vì nếu truyền `icon={HomeIcon}` HomeIcon đang là comp nên sẽ không work.
+
+- hover smoothly we use `transition`
+
