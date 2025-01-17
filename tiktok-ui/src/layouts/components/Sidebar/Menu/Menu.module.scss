@@ -24,6 +24,11 @@
     &:hover {
         background-color: rgba(22, 24, 35, .03);
     }
+
+    &::after {
+    margin-bottom: 8px;
+
+    }
 }
 
 .title {

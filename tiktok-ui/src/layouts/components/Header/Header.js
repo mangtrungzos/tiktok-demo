@@ -140,7 +140,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')} 
-                                src="https://p9-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/5b0d5f71405f0d8e4d545cba13c6dff7.jpeg?lk3s=a5d48078&nonce=57800&refresh_token=f28f792b896ae3ec1dc1c05420419fe5&x-expires=1736132400&x-signature=NIhVC1EMXvMFq%2B%2Bpchv1RSG0mOk%3D&shp=a5d48078&shcp=81f88b70" 
+                                src="https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-1/473133005_122102285384720961_2118994776920491627_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGduerVVJBCtK-S0cOuOCzeZUgCxgLQ6TVlSALGAtDpNUArCHVUOPO3YXd8SvU911Z2nTtkK7pnyBUwjIO_pbZY&_nc_ohc=w2iqWl15pbwQ7kNvgHK_xR-&_nc_oc=Adj0QhAp7apR23Bfxz2ODqVDM0x-lXsoXH6Wy7MmmsSa-WhxWekSF7z-a1tKSwVcvDE&_nc_zt=24&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=A7iDD67VTXUXL-H7cWZnRGZ&oh=00_AYDSohRVw5u4DEOwXJmaH7FmpvpURg6X4VMEX5PWp01D-Q&oe=678FB256" 
                                 alt='Chau Ngan'   
                                 fallback="https://th.bing.com/th/id/OIP.NFNT-QQ3zPiy0JCZKInAqAHaJb?rs=1&pid=ImgDetMain"                             
                             /> 
