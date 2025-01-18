@@ -55,9 +55,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange=defaultFn })
             <span className={cx('menu-arrow')}></span>
             <PopperWrapper className={cx('menu-popper')}>
                 {history.length > 1 && <Header title={current.title} onBack={handleBack} />}
-                <div className={cx('menu-body')}>
-                    {renderItems()}
-                </div>
+                <div className={cx('menu-body')}>{renderItems()}</div>
             </PopperWrapper>
         </div>
     )

@@ -286,3 +286,10 @@ console.log(a instanceOf(array));
 
 \\ 24. Build UI sidebar
 - suggest account and following account
+
+\\ 25. Buid UI sidebar
+- show window list when we hover the item
+- use tippy in accountItem
+- offset: dịch chuyển vị trí của box trong tippy
+
+* exercise: create comp avatar
