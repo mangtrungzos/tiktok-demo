@@ -1,4 +1,4 @@
-\\ .env.local - PORT=3001
+# Progress - not complete
 
 # tiktok-demo
 \\ 1. npx create-react-app tiktok-ui
